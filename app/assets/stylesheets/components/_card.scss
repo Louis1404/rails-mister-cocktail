@@ -1,39 +1,30 @@
 .card {
   background-image: url(https://cdn.liquor.com/wp-content/uploads/2018/01/02105149/Cuba-Libre-720x720-recipe.jpg);
-  height: 200px;
+  height: 250px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
   color: white;
+  margin-top: 10px;
+  border-radius: 3px;
   position: relative;
 }
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
-}
-.card-category {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 15px;
-  text-transform: uppercase;
-}
+
 .card-description {
   position: absolute;
   bottom: 10px;
   left: 10px;
 }
-.card-description h2 {
+
+.card-description a {
   font-size: 24px;
+  font-weight: bold;
+  color: white;
+  &:hover {
+    text-decoration: none;
+  }
 }
-.card-description p {
-  font-size: 14px;
-  opacity: 0.7;
-  font-weight: lighter;
-}
+
 .card-link {
   position: absolute;
   top: 0;

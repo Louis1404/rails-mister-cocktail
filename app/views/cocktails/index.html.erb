@@ -1,29 +1,22 @@
-<div class="banner">
-  <div class="banner-content">
-    <h1>Cocktails for all</h1>
-    <p>Share your best recipes to the community</p>
-    <a class="btn btn-primary btn-lg">Go!</a>
-  </div>
-</div>
+<%= render 'layouts/navbar' %>
+<%= render 'cocktails/banner' %>
 
 <div class="container">
-  <div class="container">
+  <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-success" %>
   <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <% @cocktails.each do |cocktail| %>
-        <ul>
-          <div class="card">
-            <div class="card-description">
-              <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-            </div>
-          </div>
-        </ul>
-      <% end %>
-    </div>
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-6 col-sm-4">
+        <%= render 'cocktails/card', cocktail: cocktail %>
+      </div>
+    <% end %>
   </div>
 </div>
 
+</div>
 
+<div class="footer_home">
 
-  <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-success" %>
+  <div class="footer-copyright">
+    </i><p>MVP made at Le Wagon</p>
+  </div>
 </div>

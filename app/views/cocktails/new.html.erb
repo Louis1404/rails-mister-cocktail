@@ -1,7 +1,13 @@
+<%= render 'layouts/navbar' %>
+
 <div class="container">
   <%= simple_form_for @cocktail do |f| %>
     <%= f.input :name %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
     <%= f.submit "add to favorites", class: "btn btn-success" %>
   <% end %>
   <%= link_to "Back to list", cocktails_path, class: "btn btn-warning" %>
 </div>
+
+<%= render 'layouts/footer' %>

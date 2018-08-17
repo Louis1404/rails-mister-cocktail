@@ -1,3 +1,5 @@
+<%= render 'layouts/navbar' %>
+
 <div class="container">
   <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :description %>
@@ -6,3 +8,5 @@
   <% end %>
   <%= link_to "Back to list", cocktails_path, class: "btn btn-warning" %>
 </div>
+
+<%= render 'layouts/footer' %>
