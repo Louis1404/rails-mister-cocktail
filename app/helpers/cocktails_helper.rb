@@ -1,5 +1,4 @@
 module CocktailsHelper
-
   def cocktail_image_path(cocktail)
     if cocktail.photo.blank?
       image_path('logo.png')
